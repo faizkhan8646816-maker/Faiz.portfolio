@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Faiz Portfolio</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+    }
+
+    header {
+      background: #1e293b;
+      padding: 20px;
+      text-align: center;
+      animation: fadeDown 1s ease;
+    }
+
+    h1 {
+      margin: 10px;
+    }
+
+    .container {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .section {
+      margin: 40px 0;
+      opacity: 0;
+      animation: fadeUp 1s ease forwards;
+    }
+
+    .section:nth-child(1) { animation-delay: 0.3s; }
+    .section:nth-child(2) { animation-delay: 0.6s; }
+    .section:nth-child(3) { animation-delay: 0.9s; }
+    .section:nth-child(4) { animation-delay: 1.2s; }
+
+    .skills span {
+      display: inline-block;
+      background: #38bdf8;
+      color: black;
+      padding: 8px 15px;
+      margin: 5px;
+      border-radius: 20px;
+      font-weight: bold;
+      transition: transform 0.3s;
+    }
+
+    .skills span:hover {
+      transform: scale(1.1);
+    }
+
+    .projects {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #38bdf8;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: transform 0.2s, background 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      background: #0ea5e9;
+    }
+
+    /* Animations */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Faiz Ullah 👋</h1>
+    <p>Web Developer | HTML | CSS</p>
+  </header>
+
+  <div class="container">
+
+    <div class="section">
+      <h2>About Me</h2>
+      <p>I create simple and responsive websites for clients.</p>
+    </div>
+
+    <div class="section">
+      <h2>My Skills</h2>
+      <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript (Basic)</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>My Projects</h2>
+
+      <div class="projects">
+        <div class="card">
+          <h3>Portfolio Website</h3>
+          <p>My personal portfolio design.</p>
+        </div>
+
+        <div class="card">
+          <h3>Business Website</h3>
+          <p>Simple website for small business.</p>
+        </div>
+
+        <div class="card">
+          <h3>Landing Page</h3>
+          <p>Product landing page design.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Contact Me</h2>
+      <button onclick="showMessage()">Email Me</button>
+    </div>
+
+  </div>
+
+  <script>
+    function showMessage() {
+      alert("Email: faizkhan8446816@gmail.com");
+    }
+  </script>
+
+</body>
+</html>
